@@ -1,0 +1,74 @@
+{% load static %}<!DOCTYPE html>
+<html style="height: 100%;">
+  <head>
+    {% block head %} <meta name="keywords" 
+      content="Finance, Financial Literacy, Fine-Lit, FineLitBiz, Education, Saving, Budgeting, Investing"> 
+      {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %}Fine-Lit{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/finelit logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script script type="text/javascript" src="{% static 'js/loan.js' %}"></script>
+  </head>
+  <body style="height: 100%; background-color: rgb(123 251 210 / 25%); text-align: center;">
+
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: #3465a4; justify-content: space-between;">
+      <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/finelit logo.png' %}" class = "logo"style="width: 55px;" alt="Fine-Lit"/></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="flex-grow: 0;">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'calculator' %}" style="color: aliceblue; font-weight: 900;">Calculator </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}" style="color: aliceblue; font-weight: 900;">About Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="main-container" style="display: inline-flex;width: -webkit-fill-available;flex-wrap: wrap;">
+      <div class="advertisment" style="flex-grow: 1;"></div>
+      <div class="container" style="min-height: 100%; flex-grow: 2;">
+        <ol class="breadcrumb my-4" style="color: aliceblue; font-weight: 700; background-color: #3465a4;">
+          {% block breadcrumb %}
+          {% endblock %}
+        </ol>
+        {% block content %}
+        {% endblock %}
+      </div>
+      <div class="advertisment" style="flex-grow: 1;"></div>
+    </div>
+
+    <div class="affiliates" style="display: inline-flex; width: 75%;">
+      <a href="http://join.robinhood.com/daniele121" target="_blank"><img style="width: 100%; padding: 3%;" src="{% static 'images\Robinhood affiliate link pic.png' %}"/></a>
+      <a href="https://act.webull.com/promotion/invitation/share.html?inviteCode=rSjIOu6merSa" target="_blank"><img style="width: 100%; padding: 3%;" src="{% static 'images\Webull affiliate link pic.png' %}"/></a>
+    </div>
+
+    <footer class="page-footer font-small text-center" style="background-color: #3465a4; border-top: .25rem;">
+        <div class="container">
+          <div class="col-md-12" style="padding: 1.5rem;">
+            <div class="flex-center">
+              <a href= 'https://www.facebook.com/FineLitBiz/' target="_blank"><button type="button" class="btn btn-fb"><i class="fa fa-facebook-f"></i></button></a>
+              <a href="https://twitter.com/fine_lit" target="_blank"><button type="button" class="btn btn-tw"><i class="fa fa-twitter"></i></button></a>
+              <a href="https://www.linkedin.com/company/fine-lit" target="_blank"><button type="button" class="btn btn-li"><i class="fa fa-linkedin"></i></button></a>
+              <a href="https://www.instagram.com/fine.lit/" target="_blank"><button type="button" class="btn btn-ins"><i class="fa fa-instagram"></i></button></a>
+              <a href="#" target="_blank"><button type="button" class="btn btn-pin"><i class="fa fa-pinterest"></i></button></a>
+            </div>
+        </div> 
+      </div>
+      <div class="footer-copyright text-center py-3" style="background-color: #173563; color: antiquewhite;">© 2020 Copyright:
+        <a href="#"> Fine-Lit</a>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

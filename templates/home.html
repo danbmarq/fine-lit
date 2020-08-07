@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<meta name="keywords" content="blog, blog post, budget blog, budget blogging, investment blog, financial literacy course">
+{{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+<li class="hero breadcrumb-item" style="text-align: center; font-size: medium;">
+  <h2>Simplifying Financial Literacy</h2>
+</li>
+{% endblock %}
+
+{% block content %}
+
+  <div style="overflow-x: scroll;">
+    <div>
+      <p>Welcome to FineLit, our goal is to ensure that every person is capable of achieving financial freedom and the future that they want. We are a group of young college students and graduates who are working together to create as many free and reduced cost options as possible for people seeking financial help. Our goal isn’t to get rich or to build an empire, but simply to create a strong community of citizens who are aware and who will ensure that future generations don’t endure the economic circumstances that we have created.</p>
+    </div>
+    <table class="table-responsive-xl">
+        <thead class="thead-inverse">
+          <tr>
+            <th style="padding: 1rem; color: #173563; text-align: left;">Budgeting</th>
+          </tr>
+        </thead>
+        <tbody style="display: inline-flex; overflow: auto; padding-left: .5rem;">
+            {% for blog in blogs_budgeting %}
+                <tr style="padding: 5px;">
+                    <td class="card" style="width: 18rem; background-color: #729fcf; ">
+                        <ul class="card-body" style="list-style-type: none;">
+                          <li>
+                            <a href="{% url 'blog_post' blog.pk %}" >
+                              <img src="{{blog.image.url}}" alt="{{ blog.image}}" style="width: 100%;"/>
+                              <div class="card-title" >{{ blog.name }}</div>
+                              <p class="card-text" >{{ blog.description }}</p>
+                            </a>
+                          </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table-responsive-xl">
+        <thead class="thead-inverse">
+          <tr>
+            <th style="padding: 1rem; color: #5c3566; text-align: left;">Saving</th>
+          </tr>
+        </thead>
+        <tbody style="display: inline-flex; overflow: auto; padding-left: .5rem;">
+          {% for blog in blogs_saving %}
+                <tr style="padding: 5px;">
+                    <td class="card" style="width: 18rem; background-color: #ad7fa8;">
+                        <ul class="card-body" style="list-style-type: none;">
+                          <li>
+                            <a href="{% url 'blog_post' blog.pk %}" >
+                              <img src="{{blog.image.url}}" alt="{{ blog.image}}" style="width: 100%;"/>
+                              <div class="card-title" >{{ blog.name }}</div>
+                              <p class="card-text" >{{ blog.description }}</p>
+                            </a>
+                          </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table-responsive-xl" style="padding-bottom: 1rem;">
+        <thead class="thead-inverse">
+          <tr>
+            <th style="padding: 1rem; color: #f57900; text-align: left;">Investing</th>
+          </tr>
+        </thead>
+        <tbody style="display: inline-flex; overflow: auto; padding-left: .5rem;">
+          {% for blog in blogs_investing %}
+                <tr style="padding: 5px;">
+                    <td class="card" style="width: 18rem; background-color: #f5b960;">
+                        <ul class="card-body" style="list-style-type: none;">
+                          <li>
+                            <a href="{% url 'blog_post' blog.pk %}" >
+                              <img src="{{blog.image.url}}" alt="{{ blog.image}}" style="width: 100%;"/>
+                              <div class="card-title" >{{ blog.name }}</div>
+                              <p class="card-text" >{{ blog.description }}</p>
+                            </a>
+                          </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+{% endblock %}

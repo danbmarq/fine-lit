@@ -1,0 +1,144 @@
+#calculator {
+    padding: 20px;
+    background-color: #fff;
+    background:#173563;
+    display: inline-block;
+}
+
+#loan_src {
+    margin-bottom: 10px;
+
+    background:#729fcf;
+}
+
+#loan_info {
+    margin-bottom: 10px;
+
+    background:#729fcf;
+}
+
+#table_header {
+    background: #5c3566;
+
+}
+
+#table {
+    background:#729fcf;
+}
+
+#inv_calculator {
+    padding: 20px;
+    background-color: #fff;
+    background:#173563;
+    display: inline-block;
+}
+
+#inv_src {
+    margin-bottom: 10px;
+    background:#729fcf;
+}
+
+#inv_info {
+    margin-bottom: 10px;
+
+    background:#729fcf;
+}
+
+#inv_table_header {
+    background: #f57900;
+
+}
+
+#inv_table {
+
+    background:#729fcf;
+}
+
+.container{
+    width: 50%;
+}
+
+.card-text{
+    color: black; font-weight: 500;
+}
+
+.card-title{
+    color: lightgrey; font-weight: 700;
+}
+
+.calc-title{
+    color: lightgray;
+}
+
+.calc_table{
+    font: -webkit-small-control;
+    font-family: auto;
+    font-weight: bold;
+}
+
+.nav-item:hover{
+    background:#ad7fa8;
+    border-radius: 15%;
+    
+}
+
+.logo:hover{
+    box-shadow: 1px 3px 1px #173563; 
+    border-radius: 35%;
+}
+
+@media only screen and (max-width: 420px) {
+	.container{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+    }
+
+    .affiliates {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer {
+        height: 310px;
+    }
+
+    #loan_src {
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+    }
+    
+    #loan_info {
+        margin-bottom: 10px;
+        background:#729fcf;
+    }
+    
+    #table_header {
+        background: #5c3566;    
+    }
+    
+    #table {
+    
+        background:#729fcf;
+    }
+    #inv_src {
+        margin-bottom: 10px;
+    
+        background:#729fcf;
+    }
+    
+    #inv_info {
+        margin-bottom: 10px;
+        background:#729fcf;
+    }
+    
+    #inv_table_header {
+        background: #f57900;    
+    }
+    
+    #inv_table {    
+        background:#729fcf;
+    }
+
+}

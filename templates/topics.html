@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block head %}
+<meta name="description" content="{{blog.description}}">
+{{ block.super }}
+{% endblock %}
+
+{% block title %}
+  {{ blog.name }} - {{ block.super }}
+{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item">Blog Post</li>
+  <li class="breadcrumb-item">{{ blog.name }}</li>
+{% endblock %}
+
+{% block content %}
+<img src="{{blog.image.url}}" alt="{{ blog.image}}" class = "blog-image" style="width: 85%; padding: 5%;">
+    <article style="padding: 3%; text-align: -webkit-auto; white-space: break-spaces;"><p>{{blog.subject}}</p></article>
+{% endblock %}
+
